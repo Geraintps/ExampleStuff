@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="style/main.css" />
+<script src="scripts/main.js"></script>
+<script src="scripts/nav.js"></script>
+
+<head>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/banner.jpg"></div>
+</head>
+
+<body onload="loaded()" onresize="resized()">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/parallax.js-1.5.0/parallax.min.js"></script>
+
+
+
+    <div id="home">
+        <div id="logoNav">
+            <div id="logoDiv">
+                <img class="logo" id="logo" src="img/Pebbles_Logo__SVG.svg" onclick="menu()">Menu</img>
+            </div>
+            <div class="b-nav">
+                <li><a class="b-link" href="index.html">Home</a></li>
+                <li><a class="b-link" href="store.php">Store</a></li>
+                <li><a class="scroll1 b-link" href="#aboutus">About Us</a></li>
+                <li><a class="scroll2 b-link" href="#getintouch">Get In Touch</a></li>
+                <li><a class="scroll3 b-link" href="#wheretofindus">Where To Find Us</a></li>
+            </div>
+        </div>
+        <h1 id="title">Pebbles Yard<br>Gallery and Esspresso Bar</h1>
+    </div>
+    <div class="parallax-window" id="aboutus" data-parallax="scroll" data-image-src="img/coast.jpeg"></div>
+    <div class="content">
+        <h1>About Us</h1>
+        <p>What is Lorem Ipsum?
+            <br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <br>
+            <br>Why do we use it?
+            <br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            <br>
+            
+            <br>Where does it come from?
+            <br>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+           
+            <br>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+            <br>
+            <br>Where can I get some?
+            <br>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+    </div>
+    <div class="parallax-window" id="getintouch" data-parallax="scroll" data-image-src="img/cathedral.jpg"></div>
+    <div class="content contact">
+        <h1>Get In Touch</h1>
+        <div id="contact">
+            <form action="formSubmit.php" method="post">
+                <div id="checkoutInput">
+                  <div class="materialInput empty">      
+                      <input type="text" id="name" name="name" required>
+                      <span class="highlight"></span>
+                      <span class="bar"></span>
+                      <label for="name">Name *</label>
+                      <div class="message">Please enter your name</div>
+                    </div>
+                    <div class="materialInput empty">      
+                        <input type="email" id="mail" name="email" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label for="mail">Email *</label>
+                        <div class="message">This email is invalid</div>
+                    </div>
+                  <div class="materialInput empty">      
+                      <input type="text" id="number" name="name" required>
+                      <span class="highlight"></span>
+                      <span class="bar"></span>
+                      <label for="name">Subject *</label>
+                      <div class="message">Please enter a subject</div>
+                  </div>
+                  <div class="materialInput empty">      
+                      <input type="text" id="date" name="name" required>
+                      <span class="highlight"></span>
+                      <span class="bar"></span>
+                      <label for="name">Any other information *</label>
+                      <div class="message">Please enter any other information</div>
+                  </div>
+                  <div id="submitButton">
+                    <center><button onclick="formSubmit.php">Submit</button></center>
+                  </div>
+                </div>
+              </form>
+            </div>
+    </div>
+    <div class="parallax-window" id="wheretofindus" data-parallax="scroll" data-image-src="img/barista.jpg"></div>
+    <div class="content">
+        <h1>Where To Find Us</h1>
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d39407.02080207099!2d-5.275931431204702!3d51.88032967011942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1f78c84fc2f12b05!2sPebbles%20Yard%20Gallery%20and%20Espresso%20Bar!5e0!3m2!1sen!2suk!4v1613522124011!5m2!1sen!2suk" width="80%" height="500em" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" id="theMap"></iframe>
+   </p>
+        </div>
+    <footer>
+        <div class="links">
+            <ul class="nav page">
+              <li><a href="#body">Home</a></li>
+              <li><a href="#about">About</a></li>      
+              <li><a href="store.php">Store</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <ul class="nav social">
+              <li><a href="#">Twitter</a></li></li>
+              <li><a href="##">Facebook</a></li>      
+              <li><a href="##">Instagram</a></li>
+            </ul>
+          </div>
+    </footer>
+</body>
+
+
+
+
+
+<script>
+
+    $(".scroll1").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#aboutus").offset().top
+        }, 2000);
+    });
+
+    $(".scroll2").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#getintouch").offset().top
+        }, 2000);
+    });
+
+    $(".scroll3").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#wheretofindus").offset().top
+        }, 2000);
+    });
+</script>
