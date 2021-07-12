@@ -20,6 +20,10 @@ body {
   min-height: 100%;
   
   background: transparent;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 head{
@@ -44,14 +48,6 @@ footer .nav a:hover {
 }
 .social{
   float: right;
-}
-
-body {
-  background: transparent;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 
 p {
@@ -294,7 +290,7 @@ p {
 
 
 
-.b-nav {
+.nav {
   padding-top: 30px;
   float: right;
   width: 50%;
@@ -304,10 +300,10 @@ p {
   display:flex;
   flex-direction:column;
 }
-.b-nav:not(.open) {
+.nav:not(.open) {
   visibility: hidden;
 }
-.b-nav li {
+.nav li {
   color: #444444;
   list-style-type: none;
   padding: 7.5px;
@@ -315,7 +311,7 @@ p {
   -webkit-transform: translateX(-250px);
           transform: translateX(-250px);
 }
-.b-nav li:not(.open) {
+.nav li:not(.open) {
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
   -webkit-animation-fill-mode: both;
@@ -324,14 +320,14 @@ p {
           animation-name: slideOutLeft;
 }
 
-.b-nav li:first-child {
+.nav li:first-child {
   padding-top: -10%;
 }
-.b-nav.open {
+.nav.open {
   visibility: visible;
   top: 50%;
 }
-.b-nav.open li {
+.nav.open li {
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
   -webkit-animation-fill-mode: both;
@@ -357,7 +353,7 @@ p {
           animation-name: logoSlideInLeft;
 }
 
-.b-link {
+.link {
   background: transparent;
   border-left: rgba(68, 68, 68, 0) solid 2px;
   color: #000000;
@@ -369,7 +365,7 @@ p {
   transition: all 0.4s ease;
   width: auto;
 }
-.b-link:hover, .b-link--active {
+.link:hover, .link--active {
   border-left: #ff0000 solid 2px;
   padding-left: 3%;
 }
@@ -566,110 +562,3 @@ button :hover{
 
 
 
-/*ADD TO CART*/
-.page-wrapper {
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.page-wrapper button {
-  padding-left: 10px;
-  padding-right: 10px;
-  border: none;
-  background: #d5d8e7;
-  position: relative;
-  outline: none;
-  border-radius: 5px;
-  color: #292d48;
-  font-size: 18px;
-  width: fit-content;
-}
-.page-wrapper button .cart-item {
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  top: -10px;
-  right: -10px;
-}
-.page-wrapper button .cart-item:before {
-  content: "1";
-  display: block;
-  line-height: 24px;
-  height: 24px;
-  width: 24px;
-  font-size: 12px;
-  font-weight: 600;
-  background: #2bd156;
-  color: white;
-  border-radius: 20px;
-  text-align: center;
-}
-.page-wrapper button.sendtocart .cart-item {
-  display: block;
-  animation: xAxis 1s forwards cubic-bezier(1, 0.44, 0.84, 0.165);
-}
-.page-wrapper button.sendtocart .cart-item:before {
-  animation: yAxis 1s alternate forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.cart {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: #292d48;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-}
-.cart i {
-  font-size: 25px;
-  color: white;
-}
-.cart:before {
-  content: attr(data-totalitems);
-  font-size: 12px;
-  font-weight: 600;
-  position: absolute;
-  top: -12px;
-  right: -12px;
-  background: #2bd156;
-  line-height: 24px;
-  padding: 0 5px;
-  height: 24px;
-  min-width: 24px;
-  color: white;
-  text-align: center;
-  border-radius: 24px;
-}
-.cart.shake {
-  animation: shakeCart 0.4s ease-in-out forwards;
-}
-
-@keyframes xAxis {
-  100% {
-    transform: translateX(calc(50vw - 105px));
-  }
-}
-@keyframes yAxis {
-  100% {
-    transform: translateY(calc(-50vh + 75px));
-  }
-}
-@keyframes shakeCart {
-  25% {
-    transform: translateX(6px);
-  }
-  50% {
-    transform: translateX(-4px);
-  }
-  75% {
-    transform: translateX(2px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
